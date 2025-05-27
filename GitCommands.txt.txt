@@ -1,0 +1,15 @@
+- Open terminal/gitbash at your folder location
+- git init
+- git remote add origin "link from github"
+- git add .
+- git commit -m "message"
+- git push -u origin master
+
+NOTE:
+origin - This is the nickname you’re giving to the remote URL.
+
+
+git@github.com:charu-p-sharma/PYTHON_LEARNING_2025.git - This is the actual URL of your remote repository — and it's using the SSH format.
+
+
+-u (short for --set-upstream) - This tells Git From now on, whenever I type git push or git pull, I want it to automatically use origin and main by default.
