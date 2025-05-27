@@ -4,7 +4,7 @@ console.log(greet);
 
 // the below code will give an error in TS, as i have defined greet as string
 // greet = true
-console.log(greet);
+// console.log(greet);
 
 // Note: If you do variablename and dot it will give lists of all the methods that can be used with this variable
 // Example: greet.
