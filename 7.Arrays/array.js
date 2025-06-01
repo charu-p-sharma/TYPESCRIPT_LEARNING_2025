@@ -9,8 +9,7 @@ superHeroes.push("spiderman");
 var superPower = []; // here this means it is a array of number
 superPower.push(1);
 // Another way of defining array 
-var supperMan1;
--type >= [];
+// const supperMan1:Array<data-type>=[]
 var supperMan2 = [];
 var supperMan3 = [];
 var allUsers = [];
@@ -18,3 +17,8 @@ allUsers.push({
     name: "charu",
     age: 23
 });
+// Another way of defining array 
+var MLModels = [
+    [255, 155, 255],
+    []
+];
