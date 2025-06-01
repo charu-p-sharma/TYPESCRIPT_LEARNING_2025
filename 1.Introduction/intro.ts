@@ -6,4 +6,7 @@ console.log(user.name);
 // console.log(user.email);  //this is an error in TypeScript becasuse email doesnt exists
 
 
+// TypeScript official documentation
+// https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
 export {}
