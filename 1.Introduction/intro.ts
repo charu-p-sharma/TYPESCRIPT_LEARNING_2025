@@ -1,5 +1,7 @@
 // Note : I will refer TypeScript as TS throughout my repo of TYPESCRIPT_LEARNING_2025.
 
+// tsc - is Typescript compiler 
+
 let user={name:"charu",age:23}
 console.log("Charu");
 console.log(user.name);

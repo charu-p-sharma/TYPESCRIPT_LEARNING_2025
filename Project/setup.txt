@@ -1,0 +1,19 @@
+Step 1 - open terminal and type tsc ---init (this creates a simple TS config file)
+Step 2 - start ur project type npm init -y (creates node package.json)
+Step 3 - mkdir src , mkdir dist 
+            - src is where we write our code, common standard throughout all projects i.e whether react,angular,etc.
+            - dist is the distribution which is something that goes into production which is being served to the end user.
+Step 4 - create a index.ts file under src where we write out TS code and dist is where all our JS code goes.
+Step 5 - go to tsconfig.json and uncomment the line "outDir" and add your path to dist folder.
+Step 6 - now run the terminal with tsc -W 
+            - it basically runs the Typescript code in Watch mode, so it keeps on running the things, and if there are 
+              any changes in the TS it keeps on watching it.
+Step 7 - go to index.html file and under the script tag add the path to the index.js file which is under the dist folder.
+Step 8 - now running our project in liver server in our localhost.
+            - in terminal install these packages
+            - npm i lite-server  OR, go to index.html file and right click and click on open with live server
+
+
+
+
+
