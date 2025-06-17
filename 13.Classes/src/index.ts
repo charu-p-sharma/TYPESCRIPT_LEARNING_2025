@@ -1,3 +1,5 @@
+// Note: Classes have 3 access modifiers - Private, Public, Private methods
+
 class User {
     email:string // As per TS documentation the syntax for decalring classes is like this
     name:string
