@@ -1,35 +1,36 @@
 "use strict";
 class User {
-    constructor(email, name) {
-        this.city = "mumbai";
+    constructor(email, name, userId) {
         this.email = email;
         this.name = name;
-    }
-}
-// const charu = new User(email:"charu.c@gmail.com",name:"charu") // not needed to do like this as we are already declaring it as the constructor 
-const charu = new User("c@gmail.com", "charu");
-// charu.city = "mumbai" // we are not allowed to do this as it is made as readonly
-// Note - readonly doesnt allows us to modify or set the value but i am allowed to access it.
-// So if now i dont want to allow accessing these readonly values i can set it as private
-class User1 {
-    constructor(email1, name1) {
-        this.city = "panaji"; // SET PRIVATE
-        this.email1 = email1;
-        this.name1 = name1;
-    }
-}
-// Note: - By default every thing is set as "PUBLIC" in TS until it is explicitly mentioned as private.
-// NOTE:
-// - in JS we already have # which refers as private so we could use " # city " . 
-// - in TS we have the keyword private.
-// - so there is a debate going on among the developers which is the best one to go for , but again depends on individual's choice.
-// - i personally prefer private because it makes it more clear. 
-// NOTE : if u see above it is not a production grade code, so developers generally prefer this;
-class User2 {
-    constructor(email2, name2) {
-        this.email2 = email2;
-        this.name2 = name2;
+        this.userId = userId;
+        this._courseContent = 1;
         this.city = "nasik";
     }
+    // Private Method (Can only be accessed within the class not outside the class)
+    delteUserId() {
+        console.log("UserId deleted");
+    }
+    // Getter 
+    get getAppleEmail() {
+        return `apple${this.email}`;
+    }
+    get courseCount() {
+        return this._courseContent;
+    }
+    // TS doesnt allow us to have any data type of what the setter will return
+    // set courseCount(courseNumber):void{}
+    // set courseCount(courseNumber):number{}
+    // Setter
+    set courseCount(courseNumber) {
+        if (courseNumber <= 1) {
+            throw new Error("Couse count should be more than 1");
+        }
+        this._courseContent = courseNumber;
+    }
 }
-const sharma = new User2("c@charu.com", "cs");
+// Note Recap:  
+// - Get is used to get any property either private or public 
+// - Most cases these getters and setters are designed so that the private methods can be exposed outside but with some additional logics
+// - Not necessary that if getters are there we need setters too. 
+// - Setters dont have a return type in TS, that is how setters are designed in TS.

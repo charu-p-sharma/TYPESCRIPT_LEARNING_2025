@@ -14,7 +14,6 @@ class User{
         console.log("UserId deleted")
     }
 
-
     // Getter 
     get getAppleEmail():string{
         return `apple${this.email}`
